@@ -1,0 +1,131 @@
+<style>
+{}
+body{
+    background-color: rgb(44, 4, 4);
+}
+.grid{
+    position: relative;
+    width: 1300px;
+    height: 350px;
+    left: 100px;
+    top: 200px;
+    display: flex;
+}
+.grid figure{
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+/*hera nè*/
+.container1 {
+    position: relative;
+}
+.container1 figure {
+	cursor: pointer;
+}
+.container1 figure img{
+    height: 350px;
+    width: 600px;
+    border-radius: 3px;
+}
+.container1 figure figcaption {
+	color: rgb(167, 95, 1);
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.container1 figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 700;
+    font-family: fantasy;
+    margin: 0;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,-50%,0);
+}
+figure.hera figcaption::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	border: 3.5px solid rgb(124, 81, 1);
+	content: '';
+	opacity: 0;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	-webkit-transform-origin: 50%;
+}
+figure.hera:hover figcaption::before {
+	opacity: 1;   
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg);
+}
+figure.hera:hover h2 {
+	opacity: 0;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+}
+/*winston nè*/
+.container2 {
+    position: relative;
+}
+.container2 figure {
+	cursor: pointer;
+}
+.container2 figure img{
+    height: 350px;
+    width: 600px;
+    
+    border-radius: 3px;
+}
+.container2 figure figcaption {
+    position: absolute;
+	color: rgb(255, 255, 253);
+	text-transform: uppercase;
+    font-family: fantasy;
+	font-size: 20px;
+    margin-top: -350px;
+    margin-left: 20px;
+}
+figure.winston h2 {
+	transition: transform 0.35s;
+	transform: translate3d(0,20px,0);
+}
+figure.winston:hover h2 {
+	transform: translate3d(0,0,0);
+}
+figure.winston:hover img {
+	opacity: 0.8;
+}
+figure.winston figcaption::before {
+	position: absolute;
+    top: -190px;
+    left: -130px;
+	width: 900px;
+	height: 500px;
+	background: url('https://tympanus.net/Development/HoverEffectIdeas/img/triangle.svg') no-repeat center center;
+	content: '';
+	transition: opacity 0.45s, transform 0.45s;
+	transform: rotate3d(0,0,1,45deg);
+	transform-origin: 0 100%;
+}
+figure.winston:hover figcaption::before {
+	opacity: 0.5;
+	-webkit-transform: rotate3d(0,0,1,20deg);   
+	transform: rotate3d(0,0,1,20deg);
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+

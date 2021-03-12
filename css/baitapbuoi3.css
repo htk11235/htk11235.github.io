@@ -54,12 +54,12 @@ div:hover{
     width: 350px;
     height: 460px;    
     box-shadow: none;
-
     background-color: whitesmoke;
     text-align: left;
     margin-top: 5%;
     margin-left: 35%;
     margin-right: 20%;
+    transition: 1.25s;
 }
 .year{
         display: block;
