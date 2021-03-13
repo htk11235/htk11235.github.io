@@ -38,9 +38,8 @@ body{
     position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
 }
 figure.hera figcaption::before {
 	position: absolute;
@@ -52,12 +51,12 @@ figure.hera figcaption::before {
 	content: '';
 	opacity: 0;
 	transition: opacity 0.35s, transform 0.35s;
-	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	transform: translate3d(-50%,-50%,0) rotateZ(-45deg) scale3d(0,0,1);
 	
 }
 figure.hera:hover figcaption::before {
 	opacity: 1;   
-	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg);
+	transform: translate3d(-50%,-50%,0) rotateZ(-45deg);
 }
 figure.hera:hover h2 {
 	opacity: 0;
@@ -83,7 +82,7 @@ figure.hera:hover h2 {
 }
 figure.winston h2 {
 	transition: transform 0.35s;
-	transform: translate3d(0,20px,0);
+	transform: translateY(20px);
 }
 figure.winston:hover h2 {
 	transform: translate3d(0,0,0);
@@ -100,12 +99,12 @@ figure.winston figcaption::before {
 	background: url('https://tympanus.net/Development/HoverEffectIdeas/img/triangle.svg') no-repeat center;
 	content: '';
 	transition: opacity 0.45s, transform 0.45s;
-	transform: rotate3d(0,0,1,45deg);
-	transform-origin: 0 100%;
+	transform: rotateZ(45deg);
+	transform-origin: 0 100%; 
 }
 figure.winston:hover figcaption::before {
 	opacity: 0.5;  
-	transform: rotate3d(0,0,1,20deg);
+	transform: rotateZ(20deg);
 }
 </style>
 
