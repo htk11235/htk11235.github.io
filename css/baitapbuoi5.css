@@ -1,9 +1,9 @@
 <style>
 {}
-body{
+body {
     background-color: rgb(44, 4, 4);
 }
-.grid{
+.grid {
     position: relative;
     width: 1300px;
     height: 350px;
@@ -11,7 +11,7 @@ body{
     top: 200px;
     display: flex;
 }
-.grid figure{
+.grid figure {
     overflow: hidden;
     position: relative;
     float: left;
@@ -20,7 +20,7 @@ body{
 .container1 {
     position: relative;
 }
-.container1 figure img{
+.container1 figure img {
     height: 350px;
     width: 600px;
     border-radius: 3px;
