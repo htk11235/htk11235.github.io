@@ -70,7 +70,7 @@ nav:hover .hover_1 {
 nav h1 {
     font-size: 50px;
 }
-article:hover .hover_1 {
+section:hover .hover_1 {
     opacity: 1;
 }
 nav a {
@@ -84,7 +84,7 @@ a:hover {
     border-radius: 7px;
 }
  
-article {
+section {
     text-align: center;
     font-family:cursive;
     font-size: 30px;
@@ -96,12 +96,12 @@ article {
     border-radius: 10px;
     transition: 0.2s;
 }
-article:hover {
+section:hover {
     transform: scale(1.03);
     opacity: 0.95;
     transition: 0.5s;
 }
-article:hover .hover_2 {
+section:hover .hover_2 {
     opacity: 0;
 }
 aside {
