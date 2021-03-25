@@ -1,5 +1,6 @@
 body {
-    background-image: url('./CV/imgcv/art-deco-wallpaper-1499781344.jpg');
+    background-color: wheat;
+    
 }
 div.container {
     position: relative;
@@ -7,6 +8,7 @@ div.container {
     border: 5px solid rgb(61, 0, 73);
     border-radius: 16px;
     margin-left: 200px;
+    margin-top: 40px;
     box-shadow: rgb(41, 24, 44) 30px 30px 20px;
     transition: 0.5s;
 }
