@@ -4,10 +4,10 @@ body {
 }
 .boxcv {
     position: relative;
-    width: 1000px;
+    width: 64%;
     height: 1180px;
-    margin-top: 30px;
-    margin-left: 245px;
+    left: 18%;
+    right: 18%;
     border: lightyellow 3px;
     background-color: rgb(225, 228, 204);
     border-radius: 5px;
@@ -18,8 +18,8 @@ body {
     position: absolute;
     z-index: 2;
     background-color: rgb(46, 46, 46);
-    height: 170px;
-    width: 1000px;
+    height: 14.4%;
+    width: 100%;
     margin-top: 30px;
     border-radius: 5px;
 }
@@ -27,28 +27,29 @@ body {
     
     color: azure;
     font-family: 'Tangerine', serif;
-    font-size: 50px;
-    width: 328px;
+    font-size: 40px;
+    width: 35%;
     text-align: center;
-    margin-left: 500px;
+    margin-left: 45%;
     margin-top: 5px;
 }
 .headercv_p {
     color: azure;
     font-family: 'fantasy' , 'Papyrus';
-    width: 600px;
+    width: 60%;
     text-align: center;
-    margin-left: 360px;
+    margin-left: 35%;
     margin-top: -15px;
 }
+
 .infor {
     position: absolute;
     z-index: 3;
     background-color: rgb(134, 79, 1);
-    width: 260px;
+    width: 25%;
     height: 1180px;
     border-radius: 5px;
-    margin-left: 30px;
+    margin-left: 4%;
     text-align: center;
 }
 .avatar {
@@ -73,4 +74,186 @@ body {
     font-size: 13px;
     color: rgb(143, 143, 143);
     opacity: 0.7;
+}
+/* circle */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.set-size {
+  font-size: 130px;
+  margin-left: 18%;
+  margin-top: -20px;
+}
+.pie-wrapper {
+  float: left;
+  margin: 15px;
+  position: relative;
+
+}
+.pie-wrapper .pie {
+  height: 100%;
+  width: 100%;
+  clip: rect(0, 1em, 0.5em, 0.5em);
+  position: absolute;
+}
+.pie-wrapper .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 7px solid #241807;
+  border-radius: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  
+}
+.pie-wrapper .label {
+  background: #313131;
+  border-radius: 50%;
+  color: #ecf0f1;
+  cursor: default;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+.pie-wrapper .shadow {
+  height: 130px;
+  width: 130px;
+  border: 4px double #503617 ;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 1;
+}
+.pie-wrapper.style-2 .label {
+  background: none;
+  font-family: Verdana; 
+  font-size: 3px;
+  color: #131313;
+}
+.pie-wrapper.progress-45 .pie .half-circle {
+  font-size: 100px;
+  border: 5px  #0a0a0a solid;
+  
+}
+.pie-wrapper.progress-45 .pie .left-side {
+  transform: rotate(90deg);
+}
+.circle_p {
+  font-family: 'Akaya Telivigala';
+  font-size: 18px;
+  position: absolute;
+  padding: 30%;
+}
+/* content */
+.education {
+  font-family: 'Tangerine', serif;  
+  font-size: 65px;
+  padding-top: 22%;
+  color: #503617;
+  padding-left: 54%;
+
+}
+*{
+  box-sizing: border-box;
+}
+.timeline {
+  padding-top: ;
+}
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 177px;
+  background-color: rgb(0, 0, 0);
+  left: 33%;
+  top: 25%;
+}
+
+/* Container around content */
+.container {
+  padding-top: ;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  text-align: justify;
+  font-family: fantasy;
+}
+.content h3{
+  font-family: 'Tangerine', serif;
+  color: #503617;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.content p {
+  font-family: 'BioRhyme';
+  font-size: 15px;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background-color: rgb(0, 0, 0);
+  top: 38px;
+  margin-left: -46.5px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the right */
+.right {
+  left: 38%;
+} ~
+/*skill bar*/
+.skillbar {
+  width: 200px;
+  position: absolute;
+  background-color: rgb(225, 228, 204);
+  left: 30%;
+  text-align: center;
+}
+.skillbar_circle {
+  width: 20px;
+  height: 20px;
+  border: 1.7px rgb(0, 0, 0) solid;
+  border-radius: 50% ;
+  background-color: rgb(225, 228, 204);
+  margin-right: 4px;
+  margin-top: 5px;
+}
+.skillbar_circle_fill {
+  width: 20px;
+  height: 20px;
+  border: 1.7px rgb(0, 0, 0) solid;
+  border-radius: 50% ;
+  background-color: rgb(0, 0, 0);
+  margin-right: 4px;
+  margin-top: 5px;
+}
+.skillbar_bar {
+  display: flex;
+  width: calc(100%-30px);
+}
+.skillbar_name {
+  margin-right: 15px;
+  font-family: cursive;
+  font-size: 20px;
+  width: 70px;
+}
+.competences {
+  font-family: 'Tangerine', serif;  
+  font-size: 50px;
+  margin-top: -5px;
+  color: #503617;
+  padding-left: 54%;
 }
