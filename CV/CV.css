@@ -4,10 +4,10 @@ body {
 }
 .boxcv {
     position: relative;
-    width: 64%;
+    width: 84%;
     height: 1180px;
-    left: 18%;
-    right: 18%;
+    left: 8%;
+    right: 8%;
     border: lightyellow 3px;
     background-color: rgb(225, 228, 204);
     border-radius: 5px;
@@ -24,11 +24,10 @@ body {
     border-radius: 5px;
 }
 .headercv_h1 {
-    
     color: azure;
     font-family: 'Tangerine', serif;
     font-size: 40px;
-    width: 35%;
+    width: 45%;
     text-align: center;
     margin-left: 45%;
     margin-top: 5px;
@@ -83,8 +82,8 @@ body {
 }
 .set-size {
   font-size: 130px;
-  margin-left: 18%;
-  margin-top: -20px;
+  margin-left: 53.5%;
+  margin-top: 230px;
 }
 .pie-wrapper {
   float: left;
@@ -149,77 +148,84 @@ body {
 .education {
   font-family: 'Tangerine', serif;  
   font-size: 65px;
-  padding-top: 22%;
+  margin-top: 230px;
   color: #503617;
   padding-left: 54%;
-
-}
-*{
-  box-sizing: border-box;
-}
-.timeline {
-  padding-top: ;
-}
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
+  margin-bottom: 0px;
   position: absolute;
-  width: 3px;
-  height: 177px;
-  background-color: rgb(0, 0, 0);
-  left: 33%;
-  top: 25%;
 }
-
-/* Container around content */
-.container {
-  padding-top: ;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-  text-align: justify;
-  font-family: fantasy;
+.boxcontent {
+  display: flex;
 }
 .content h3{
-  font-family: 'Tangerine', serif;
-  color: #503617;
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-top: 325px;
+  margin-left: 1%;
+  position: absolute;
 }
 .content p {
+  position: absolute;
   font-family: 'BioRhyme';
   font-size: 15px;
+  margin-top: 350px;
+  margin-left: 4%;
 }
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
+.content2 h3{
+  margin-top: -12px;
+  margin-left: 1%;
   position: absolute;
-  width: 9px;
-  height: 9px;
-  background-color: rgb(0, 0, 0);
-  top: 38px;
-  margin-left: -46.5px;
-  border-radius: 50%;
-  z-index: 1;
 }
+.content2 p{
+  position: absolute;
+  font-family: 'BioRhyme';
+  font-size: 15px;
+  margin-top: 11px;
+  margin-left: 4%;
+}
+.timeline {
+height: 180px;
+width: 0.1px;
+border: rgb(0, 0, 0) solid 1.5px;
+background-color: black;
+margin-left: 30%;
+margin-top: 330px;
+}
+.timeline_circle {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: black;
+margin-left: -6.5px;
+margin-top: 330px;
+}
+.timeline_circle2 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  margin-left: -9.7px;
+  margin-top: 450px;
+  }
 
-/* Place the container to the right */
-.right {
-  left: 38%;
-} ~
+
+
+
+
 /*skill bar*/
+.boxskillbar {
+  display: flex;
+}
 .skillbar {
   width: 200px;
   position: absolute;
   background-color: rgb(225, 228, 204);
-  left: 30%;
+  right: 45%;
+  text-align: center;
+}
+.skillbar2 {
+  width: 200px;
+  position: absolute;
+  background-color: rgb(225, 228, 204);
+  right: 15%;
   text-align: center;
 }
 .skillbar_circle {
