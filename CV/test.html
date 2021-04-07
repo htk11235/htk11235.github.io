@@ -1,45 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  .boxcontent {
-    display: flex;
-  }
-  .boxcontent h3{
-    margin-top: 0px;
-    margin-left: 10%;
-  }
-  .boxcontent p {
-    font-family: 'BioRhyme';
-  font-size: 15px;
-  }
-.timeline {
-  height: 180px;
-  width: 0.1px;
-  border: rgb(0, 0, 0) solid 1.5px;
-  background-color: black;
+<script>
+function startTime() {
+  let today = new Date();
+  let date = checkTime(today.getDate()) + '/' +checkTime((today.getMonth()+1))+'/'+today.getFullYear();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  let d    = checkTime(today.getDate());
+  let m    = checkTime((today.getMonth()+1));
+  let y    = today.getFullYear();
+  function checkTime(i) {
+  if (i < 10) {i = "0" + i};  
+  return i;
 }
-.timeline_circle {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: black;
-  margin-left: -6.5px;
-  margin-top: 5px;
+  document.getElementById('bai1').innerHTML = time + " | " + date;
+  document.getElementById('bai2').innerHTML = m + "-" + d + "-" + y + "<br>" + m + "/" + d + "/" + y + "<br>"  + d + "/" + m + "/" + y + "<br>"  + d + "-" + m + "-" + y;
+  let t = setTimeout(startTime, 500);
 }
-</style>
+  
+function BT3Function() {
+
+let a = document.getElementById("bt3").value;
+a = Number(a);
+
+if (a === null || !Number.isInteger(a)) {
+    alert("Please input a integer number!");
+    return;}
+    
+let x = -1;
+let digits = Array.from(String(a), Number);
+
+for(let index = 0; index < digits.length; index++) {
+
+    const digit = digits[index];
+    
+    if(digit <= x) {
+      document.getElementById("bt3").style.backgroundColor = "red";
+        return;} 
+               {
+        x = digit;
+    }
+    }
+(document.getElementById("bt3").style.backgroundColor = "green");
+}
+
+function BT4Function() {
+            let input = document.getElementById("bt4").value;
+            let characters = Array.from(input);
+            for(let i = 0; i < characters.length; i++) {
+                characters[i] = String.fromCharCode(characters[i].charCodeAt(0) + 1);
+            }
+            document.getElementById('bt4kq').innerHTML=(characters.join(""));
+        }
+
+function BT5Function() {
+let txt = document.getElementById("bt5").value;
+            const l = txt.length;
+
+            if(l < 3 || l % 2 == 0) {
+            document.getElementById('bt5kq').innerHTML="";
+                return;
+            }
+           let kq = txt.substring(l/2-1, (l/2 + 2));
+           document.getElementById('bt5kq').innerHTML=kq;
+        }
+
+        function BT7Function() {
+            let inputString = document.getElementById("bt7").value;
+            (inputString.toLowerCase().includes("java")) ? document.getElementById("bt7kq").innerHTML="Có nè" : document.getElementById("bt7kq").innerHTML="Không";
+        }
+    
+        function BT8Function() {
+            let a = document.getElementById("bt8").value;
+            a = Number(a);
+            let month = ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", 
+                            "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", 
+                            "Tháng mười", "Tháng mười một", "Tháng mười hai"];
+         document.getElementById("bt8kq").innerHTML= month[a - 1];
+}
+
+function BT9Function() {
+            let txt = document.getElementById("bt9").value;
+            let array = txt.trim().split(/\s+/);
+            let longest = array.reduce((max, word) => {
+                return word.length > max.length ? word : max;
+            }, "");
+            document.getElementById("bt9kq").innerHTML = longest;
+        }
+
+        function BT10Function() {
+            let a = Number(document.getElementById("bt10a").value);
+            let b = Number(document.getElementById("bt10b").value);
+			a=Number(a);
+            b=Number(b);
+            for(let v = a; v <= b; v++){
+                if(snt(v)){
+                   	document.getElementById("bt10kq").innerHTML = v;
+                    return;
+                }
+            
+        }
+        }
+function snt(number){
+            if (number == 2) {
+                return true;
+            }
+
+            if (number < 2) { 
+                return false;
+            }
+
+            for(let i = 2; i <= Math.sqrt(number); i++){
+                if (number % i == 0) { 
+                    return false;
+                }
+            }
+
+            return true;
+        }
+</script>
 </head>
-<body>
-  <div class="boxcontent">
-    <div class="timeline"></div>
-    <div class="timeline_circle"></div>
-    <div class="content">
-      <h3>2002-2020</h3> 
-      <p>F*ckingstudent</p>
-    </div>  
-  </div>  
+
+<body onload="startTime()">
+<p>bai1</p>
+<div id="bai1"></div>
+<p>bai2</p>
+<div id="bai2"></div>
+<p>bai3</p>
+<input type="text" id="bt3" onkeypress="BT3Function()">
+<p>bai4</p>
+<input type="text" id="bt4" onkeypress="BT4Function()">
+<div id="bt4kq"></div>
+<p>bai5</p>
+<input type="text" id="bt5" onkeypress="BT5Function()">
+<div id="bt5kq"></div>
+<p>bai7</p>
+<input type="text" id="bt7" onkeypress="BT7Function()">
+<div id="bt7kq"></div>
+<p>bai8</p>
+<input type="text" id="bt8" onkeypress="BT8Function()">
+<div id="bt8kq"></div>
+<p>bai9</p>
+<input type="text" id="bt9" onkeypress="BT9Function()">
+<div id="bt9kq"></div>
+<p>bai10</p>
+<input type="text" id="bt10a" onkeypress="BT10Function()">
+<input type="text" id="bt10b" onkeypress="BT10Function()">
+<div id="bt10kq"></div>
+</div>
 </body>
-</html><h3>2002-2020</h3>
-<p>F*ckingstudent</p>
-<h3>2020-2021</h3>
-<p>Still a f*ckingstudent</p>
+</html>

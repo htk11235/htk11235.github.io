@@ -1,151 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <style>
-        
-    </style>
+<script>
+function startTime() {
+  let today = new Date();
+  let date = checkTime(today.getDate()) + '/' +checkTime((today.getMonth()+1))+'/'+today.getFullYear();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  let d    = checkTime(today.getDate());
+  let m    = checkTime((today.getMonth()+1));
+  let y    = today.getFullYear();
+  function checkTime(i) {
+  if (i < 10) {i = "0" + i};  
+  return i;
+}
+  document.getElementById('bai1').innerHTML = time + " | " + date;
+  document.getElementById('bai2').innerHTML = m + "-" + d + "-" + y + "<br>" + m + "/" + d + "/" + y + "<br>"  + d + "/" + m + "/" + y + "<br>"  + d + "-" + m + "-" + y;
+  let t = setTimeout(startTime, 500);
+}
+  
+function BT3Function() {
+
+let a = document.getElementById("bt3").value;
+a = Number(a);
+
+if (a === null || !Number.isInteger(a)) {
+    alert("Please input a integer number!");
+    return;}
+    
+let x = -1;
+let digits = Array.from(String(a), Number);
+
+for(let index = 0; index < digits.length; index++) {
+
+    const digit = digits[index];
+    
+    if(digit <= x) {
+      document.getElementById("bt3").style.backgroundColor = "red";
+        return;} 
+               {
+        x = digit;
+    }
+    }
+(document.getElementById("bt3").style.backgroundColor = "green");
+}
+
+function BT4Function() {
+            let input = document.getElementById("bt4").value;
+            let characters = Array.from(input);
+            for(let i = 0; i < characters.length; i++) {
+                characters[i] = String.fromCharCode(characters[i].charCodeAt(0) + 1);
+            }
+            document.getElementById('bt4kq').innerHTML=(characters.join(""));
+        }
+
+function BT5Function() {
+let txt = document.getElementById("bt5").value;
+            const l = txt.length;
+
+            if(l < 3 || l % 2 == 0) {
+            document.getElementById('bt5kq').innerHTML="";
+                return;
+            }
+           let kq = txt.substring(l/2-1, (l/2 + 2));
+           document.getElementById('bt5kq').innerHTML=kq;
+        }
+
+        function BT7Function() {
+            let inputString = document.getElementById("bt7").value;
+            (inputString.toLowerCase().includes("java")) ? document.getElementById("bt7kq").innerHTML="Có nè" : document.getElementById("bt7kq").innerHTML="Không";
+        }
+    
+        function BT8Function() {
+            let a = document.getElementById("bt8").value;
+            a = Number(a);
+            let month = ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", 
+                            "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", 
+                            "Tháng mười", "Tháng mười một", "Tháng mười hai"];
+         document.getElementById("bt8kq").innerHTML= month[a - 1];
+}
+
+function BT9Function() {
+            let txt = document.getElementById("bt9").value;
+            let array = txt.trim().split(/\s+/);
+            let longest = array.reduce((max, word) => {
+                return word.length > max.length ? word : max;
+            }, "");
+            document.getElementById("bt9kq").innerHTML = longest;
+        }
+
+        function BT10Function() {
+            let a = Number(document.getElementById("bt10a").value);
+            let b = Number(document.getElementById("bt10b").value);
+			a=Number(a);
+            b=Number(b);
+            for(let v = a; v <= b; v++){
+                if(snt(v)){
+                   	document.getElementById("bt10kq").innerHTML = v;
+                    return;
+                }
+            
+        }
+        }
+function snt(number){
+            if (number == 2) {
+                return true;
+            }
+
+            if (number < 2) { 
+                return false;
+            }
+
+            for(let i = 2; i <= Math.sqrt(number); i++){
+                if (number % i == 0) { 
+                    return false;
+                }
+            }
+
+            return true;
+        }
+</script>
 </head>
-<body>
-    <h1>Introductory knowledge of Artificial Intelligencev</h1>
-    <i>Kể từ khi phát minh ra máy tính và máy móc, khả năng thực hiện các nhiệm vụ khác nhau của chúng đã tăng lên theo cấp số nhân. Con người đã phát triển hệ thống máy tính trên quan điểm các lĩnh vực làm việc đa dạng, tốc độ ngày càng tăng và kích thước ngày càng giảm theo thời gian. Một nhánh của Khoa học Máy tính có tên là Trí tuệ nhân tạo (AI) đang theo đuổi việc tạo ra các máy tính hoặc máy móc thông minh như con người.
-    </i>
-    <h2>Trí tuệ nhân tạo (AI) là gì?</h2>
-    <p>Theo cha đẻ của Trí tuệ nhân tạo, John McCarthy, đó là<i>“Khoa học và kỹ thuật tạo ra các máy móc thông minh, đặc biệt là các chương trình máy tính thông minh”.</i>
-    <br><br>Trí tuệ nhân tạo (AI) là một cách làm cho một máy tính, một robot điều khiển bằng máy tính hoặc một phần mềm suy nghĩ một cách thông minh, theo cách tương tự như suy nghĩ của con người thông minh.
 
-<br><br>AI được hoàn thiện bằng cách nghiên cứu cách bộ não con người suy nghĩ và cách con người học hỏi, quyết định và làm việc trong khi cố gắng giải quyết một vấn đề và sau đó sử dụng kết quả của nghiên cứu này làm cơ sở phát triển phần mềm và hệ thống thông minh.</p>
-     <h2>Mục tiêu của AI</h2>   
-     <ul>
-         <li>Tạo ra hệ thống chuyên gia - Hệ thống thể hiện hành vi thông minh, học hỏi, chứng minh, giải thích và tư vấn cho người dùng của nó.</li>
-         <li>Để triển khai trí thông minh của con người trong máy móc - Tạo ra các hệ thống hiểu, suy nghĩ, học hỏi và hành xử như con người.</li>
-
-
-     </ul>
-     <h2>Các ứng dụng của AI</h2>
-     <p>AI đã thống trị trong các lĩnh vực khác nhau như:</p>
-     <ol>
-         <li>Game - AI đóng vai trò quan trọng trong các trò chơi chiến lược như cờ vua, poker, tic-tac-toe, v.v., nơi máy có thể nghĩ ra một số lượng lớn các vị trí có thể dựa trên kiến thức kinh nghiệm.</li>
-         <li>Xử lý ngôn ngữ tự nhiên - Có thể tương tác với máy tính để hiểu ngôn ngữ tự nhiên của con người.</li>
-         <li>Hệ thống chuyên gia - Có một số ứng dụng tích hợp máy móc, phần mềm và thông tin đặc biệt để truyền đạt lý luận và tư vấn. Họ cung cấp giải thích và lời khuyên cho người dùng.</li>
-         <li>Hệ thống thị giác - Các hệ thống này hiểu, diễn giải và lĩnh hội đầu vào trực quan trên máy tính. Ví dụ:
-            Máy bay do thám chụp ảnh, được sử dụng để tìm ra thông tin không gian hoặc bản đồ của các khu vực.
-            Các bác sĩ sử dụng hệ thống chuyên gia lâm sàng để chẩn đoán cho bệnh nhân.
-            Cảnh sát sử dụng phần mềm máy tính có thể nhận dạng khuôn mặt của tội phạm với bức chân dung được lưu trữ bởi nghệ sĩ pháp y.</li>
-        <li>Nhận dạng giọng nói - Một số hệ thống thông minh có khả năng nghe và hiểu ngôn ngữ dưới dạng câu và ý nghĩa của chúng trong khi con người nói chuyện với nó. Nó có thể xử lý các trọng âm khác nhau, từ lóng, tiếng ồn trong nền, thay đổi tiếng ồn của con người do lạnh, v.v.</li>
-        <li>Nhận dạng chữ viết tay - Phần mềm nhận dạng chữ viết tay đọc văn bản được viết trên giấy bằng bút hoặc trên màn hình bằng bút cảm ứng. Nó có thể nhận ra hình dạng của các chữ cái và chuyển nó thành văn bản có thể chỉnh sửa.</li>
-        <li>Robot thông minh - Robot có thể thực hiện các nhiệm vụ do con người giao. Chúng có các cảm biến để phát hiện dữ liệu vật lý từ thế giới thực như ánh sáng, nhiệt, nhiệt độ, chuyển động, âm thanh, va chạm và áp suất. Chúng có bộ xử lý hiệu quả, nhiều cảm biến và bộ nhớ khổng lồ, để thể hiện trí thông minh. Ngoài ra, chúng có khả năng học hỏi từ những sai lầm của mình và chúng có thể thích nghi với môi trường mới.
-            Các lĩnh vực của AI</li>
-       <h2>Các lĩnh vực của AI</h2>     
-       <img src="https://images.viblo.asia/df75157f-de37-40ba-98af-8b1ae7a81d16.jpg" alt="quoc"> 
-      <ol>
-          <li><h3>Fuzzy Logic</h3></li>
-          <img src="https://bitly.com.vn/r5xik9" width="500" alt="khong load duoc">
-          <p>Logic mờ (FL) là một phương pháp lập luận giống với suy luận của con người. Cách tiếp cận của FL bắt chước cách ra quyết định của con người liên quan đến tất cả các khả năng trung gian giữa các giá trị kỹ thuật số YES và NO.
-           <br>Khối logic thông thường mà máy tính có thể hiểu được nhận đầu vào chính xác và tạo ra đầu ra xác định là TRUE hoặc FALSE, tương đương với YES hoặc NO của con người.
-           <br>Người phát minh ra logic mờ, Lotfi Zadeh, đã nhận thấy rằng không giống như máy tính, việc ra quyết định của con người bao gồm một loạt các khả năng giữa CÓ và KHÔNG, chẳng hạn như:</p>
-           <ul>
-               <li>CHẮC CHẮN CÓ</li>
-               <li>CÓ THỂ CÓ</li>
-               <li>KHÔNG THỂ NÓI</li>
-               <li>CHẮC CHẮN LÀ KHÔNG</li>
-
-           </ul>   
-          <p>Logic mờ hoạt động trên các mức khả năng của đầu vào để đạt được đầu ra xác định.</p> 
-          <br>Các lĩnh vực ứng dụng chính của logic mờ là:
-
-        
-        <b><h3>Hệ thống oto</h3></b>
-        <ul>
-            <li>Hộp số tự động</li>
-            <li>Tay lái 4 bánh</li>
-            <li>Kiểm soát môi trường phương tiện</li>    
-        </ul>
-        <b><h3>Hàng điện tử tiêu dùng</h3></b>
-        <ul>
-            <li>Hệ thống Hi-Fi</li>
-            <li>Máy photocopy</li>
-            <li>Máy ảnh tĩnh và máy quay video </li>
-            <li>Tivi </li>
-        </ul>
-        <b><h3>Hàng gia dụng</h3></b>
-        <ul>
-            <li>Lò vi sóng</li>
-            <li>Tủ lạnh</li>
-            <li>Lò nướng bánh mì</li>
-            <li>Máy hút bụi</li>
-            <li>Máy giặt</li>
-        </ul>
-        <b><h3>Kiểm soát môi trường</h3></b>
-        <ul>
-            <li>Máy lạnh / Máy sấy / Máy sưởi</li>
-            <li>Máy tạo ẩm</li>
-        </ul>
-        <li><h3>Natural Language Processing</h3></li>
-        <img src="https://bitly.com.vn/yc9iik" width="500" alt="khong load duoc">
-        <p>Xử lý ngôn ngữ tự nhiên (NLP) đề cập đến phương pháp AI giao tiếp với một hệ thống thông minh sử dụng ngôn ngữ tự nhiên như tiếng Anh.
-        <br><br>Xử lý ngôn ngữ tự nhiên là bắt buộc khi bạn muốn một hệ thống thông minh như rô bốt thực hiện theo hướng dẫn của bạn, khi bạn muốn nghe quyết định từ hệ thống chuyên gia lâm sàng dựa trên đối thoại, v.v.
-        <br><br>Lĩnh vực NLP liên quan đến việc chế tạo máy tính để thực hiện các tác vụ hữu ích với ngôn ngữ tự nhiên mà con người sử dụng. Đầu vào và đầu ra của một hệ thống NLP có thể là:
-            <ul>
-                <li>Lời nói</li>
-                <li>Văn bản viết tay</li>
-            </ul>
-
-        <li><h3>Expert Systems</h3></li>
-
-        Hệ thống chuyên gia (ES) là một trong những lĩnh vực nghiên cứu nổi bật của AI. Nó được giới thiệu bởi các nhà nghiên cứu tại Đại học Stanford, Khoa Khoa học Máy tính.
-       <br><br>Hệ thống chuyên gia là các ứng dụng máy tính được phát triển để giải quyết các vấn đề phức tạp trong một lĩnh vực cụ thể, ở mức độ thông thường và chuyên môn của con người.
-       <br><br>Đặc điểm của hệ thống chuyên gia:
-            <ul>
-                 <li>Hiệu suất cao</li>
-                 <li>Có thể hiểu được</li>
-                <li>Đáng tin cậy</li>
-                <li>Phản hồi cao</li>
-            </ul>
-       <br> Hệ thống chuyên gia có khả năng:
-            <ul>
-                <li>Tư vấn</li>
-                <li>Hướng dẫn và hỗ trợ con người ra quyết định</li>
-                <li>Minh chứng</li>
-                <li>Tìm ra giải pháp</li>
-                <li>Chẩn đoán</li>
-                <li>Giải thích</li>
-                <li>Phiên dịch đầu vào</li>
-                <li>Phiên dịch đầu vào</li>
-                <li>Dự đoán kết quả</li>
-                <li>Biện minh cho kết luận</li>
-                <li>Đề xuất các phương án thay thế cho một vấn đề</li>
-
-            </ul>
-      <br> Nhưng lại không có khả năng:
-             <ul>
-                <li>Tư vấn</li>
-                <li>Hướng dẫn và hỗ trợ con người ra quyết định</li>
-                <li>Minh chứng</li>
-                <li>Tìm ra giải pháp</li>
-                <li>Chẩn đoán</li>
-                <li>Giải thích</li>
-                <li>Phiên dịch đầu vào</li>
-                <li>Dự đoán kết quả</li>
-                <li>Biện minh cho kết luận</li>
-                <li>Đề xuất các phương án thay thế cho một vấn đề</li>
-            </ul>
-      <br>Các ứng dụng của Hệ thống Chuyên gia
-            <ul>
-                <li>Lĩnh vực thiết kế: Thiết kế ống kính máy ảnh, thiết kế ô tô.</li>
-                <li>Lĩnh vực y tế: Hệ thống chẩn đoán để suy ra nguyên nhân gây bệnh từ dữ liệu quan sát, dẫn truyền các hoạt động y tế trên con người.</li>
-                <li>Hệ thống giám sát: So sánh dữ liệu liên tục với hệ thống quan sát được hoặc với hành vi theo quy định như giám sát rò rỉ trong đường ống xăng dầu dài.</li>
-                <li>Hệ thống kiểm soát quy trình: Kiểm soát quá trình vật lý dựa trên giám sát.</li>
-                <li>Lĩnh vực tri thức: Tìm ra lỗi trên phương tiện giao thông, máy tính.</li>
-                <li>Tài chính/Thương mại: Phát hiện gian lận có thể xảy ra, giao dịch đáng ngờ, giao dịch thị trường chứng khoán, lên lịch hàng không, lên lịch hàng hóa.</li>
-            </ul>
-
-
-
-
-
-        </p>
-     </ol>
-
-   
+<body onload="startTime()">
+<p>bai1</p>
+<div id="bai1"></div>
+<p>bai2</p>
+<div id="bai2"></div>
+<p>bai3</p>
+<input type="text" id="bt3" onkeypress="BT3Function()">
+<p>bai4</p>
+<input type="text" id="bt4" onkeypress="BT4Function()">
+<div id="bt4kq"></div>
+<p>bai5</p>
+<input type="text" id="bt5" onkeypress="BT5Function()">
+<div id="bt5kq"></div>
+<p>bai7</p>
+<input type="text" id="bt7" onkeypress="BT7Function()">
+<div id="bt7kq"></div>
+<p>bai8</p>
+<input type="text" id="bt8" onkeypress="BT8Function()">
+<div id="bt8kq"></div>
+<p>bai9</p>
+<input type="text" id="bt9" onkeypress="BT9Function()">
+<div id="bt9kq"></div>
+<p>bai10</p>
+<input type="text" id="bt10a" onkeypress="BT10Function()">
+<input type="text" id="bt10b" onkeypress="BT10Function()">
+<div id="bt10kq"></div>
+</div>
 </body>
 </html>
