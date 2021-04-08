@@ -2,139 +2,154 @@
 <html>
 <head>
 <script>
-function startTime() {
-
-  let today = new Date();
-  let date = checkTime(today.getDate()) + '/' +checkTime((today.getMonth()+1))+'/'+today.getFullYear();
-  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  let d    = checkTime(today.getDate());
-  let m    = checkTime((today.getMonth()+1));
-  let y    = today.getFullYear();
-  function checkTime(i) {
-  if (i < 10) {i = "0" + i};  
-  return i;
+  function startTime() {
+    let today = new Date();
+    console.log(today);
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let d = checkTime(today.getDate());
+    let m = checkTime((today.getMonth() + 1));
+    let y = today.getFullYear();
+    
+    document.getElementById('bai1').innerHTML = today;
+    //document.getElementById('bai1').innerHTML = time + " | " + d + "/" + m + "/" + y;
+    document.getElementById('bai2').innerHTML = m + "-" + d + "-" + y + "<br>" + m + "/" + d + "/" + y + "<br>"  + d + "/" + m + "/" + y + "<br>"  + d + "-" + m + "-" + y;
   }
-  document.getElementById('bai1').innerHTML = time + " | " + date;
-  document.getElementById('bai2').innerHTML = m + "-" + d + "-" + y + "<br>" + m + "/" + d + "/" + y + "<br>"  + d + "/" + m + "/" + y + "<br>"  + d + "-" + m + "-" + y;
-  let t = setTimeout(startTime, 500);
+  function checkTime(i) {
+    if (i < 10)
+      i = "0" + i;  
+    return i;
+  }
+    
+  function BT3Function() {
 
-}
-  
-function BT3Function() {
+    let a = document.getElementById("bt3").value;
+    a = Number(a);
 
-  let a = document.getElementById("bt3").value;
-  a = Number(a);
+    if (a === null || !Number.isInteger(a)) {
+        alert("Please input a integer number!");
+        return;}
+        
+    let x = -1;
+    let digits = Array.from(String(a), Number);
 
-  if (a === null || !Number.isInteger(a)) {
-      alert("Please input a integer number!");
-      return;}
-      
-  let x = -1;
-  let digits = Array.from(String(a), Number);
-
-  for(let index = 0; index < digits.length; index++) {
-
-      const digit = digits[index];
-      
-      if(digit <= x) {
-        document.getElementById("bt3").style.backgroundColor = "red";
-          return;} 
-        {
+    for(let index = 0; index < digits.length; index++) {
+        const digit = digits[index];        
+        if(digit <= x) {
+          document.getElementById("bt3").style.backgroundColor = "red";
+            return;
+        } 
           x = digit;
         }
-      }
-  (document.getElementById("bt3").style.backgroundColor = "green");
-}
-
-function BT4Function() {
-
-  let input = document.getElementById("bt4").value;
-  let characters = Array.from(input);
-  for(let i = 0; i < characters.length; i++) {
-    characters[i] = String.fromCharCode(characters[i].charCodeAt(0) + 1);
+    document.getElementById("bt3").style.backgroundColor = "green";
   }
-  document.getElementById('bt4kq').innerHTML=(characters.join(""));
 
-}
+  function BT4Function() {
+    let input = document.getElementById("bt4").value;
+    let characters = Array.from(input);
 
-function BT5Function() {
+    for(let i = 0; i < characters.length; i++) {
+      characters[i] = String.fromCharCode(characters[i].charCodeAt(0) + 1);
+    }
+    document.getElementById('bt4kq').innerHTML=(characters.join(""));
 
-  let txt = document.getElementById("bt5").value;
-  const l = txt.length;
-
-  if(l < 3 || l % 2 == 0) {
-    document.getElementById('bt5kq').innerHTML="";
-    return;
   }
-    let kq = txt.substring(l/2-1, (l/2 + 2));
-    document.getElementById('bt5kq').innerHTML=kq;
-}
 
-function BT7Function() {
+  function BT5Function() {
 
-  let inputString = document.getElementById("bt7").value;
-  (inputString.toLowerCase().includes("java")) ? document.getElementById("bt7kq").innerHTML="Có nè" : document.getElementById("bt7kq").innerHTML="Không";
+    let txt = document.getElementById("bt5").value;
+    const l = txt.length;
 
-}
-    
-function BT8Function() {
-
-  let a = document.getElementById("bt8").value;
-  a = Number(a);
-  let month = ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"];
-  document.getElementById("bt8kq").innerHTML= month[a - 1];
-
-}
-
-function BT9Function() {
-
-  let txt = document.getElementById("bt9").value;
-  let array = txt.trim().split(/\s+/);
-  let longest = array.reduce((max, word) => {
-  return word.length > max.length ? word : max;}, "");
-  document.getElementById("bt9kq").innerHTML = longest;
-
-}
-
-function BT10Function() {
-
-  let a = Number(document.getElementById("bt10a").value);
-  let b = Number(document.getElementById("bt10b").value);
-	a=Number(a);
-  b=Number(b);
-
-  for(let v = a; v <= b; v++){
-    if(snt(v)){
-      document.getElementById("bt10kq").innerHTML = v;
+    if(l < 3 || l % 2 == 0) {
+      document.getElementById('bt5kq').innerHTML="";
       return;
     }
+    let kq = txt.substring(l/2-1, (l/2 + 2));
+
+    document.getElementById('bt5kq').innerHTML=kq;
   }
 
-}
-function snt(number) {
+  function BT6Function() {
+    let txt = document.getElementById('bt6').value;
+    let max = 0;
+    let max2= 0;
+    let arr = txt;
 
-  if (number == 2) {
-    return true;
+    arr.sort();
+    let x=arr[0];
+    for (let i = 0 ; i<arr.length ; i++ ) {
+      if (arr[i]==x) {
+        max2++;
+      } 
+        if (max2>max) {
+          max=max2;
+          x=arr[i-1];
+        }
+
+      document.getElementsById("bt6kq").innerHTML=x;
   }
 
-  if (number < 2) { 
-    return false;
+  }
+  function BT7Function() {
+    let inputString = document.getElementById("bt7").value;
+
+    inputString.toLowerCase().includes("java")
+      ? document.getElementById("bt7kq").innerHTML="Có nè" 
+      : document.getElementById("bt7kq").innerHTML="Không";
+  }
+      
+  function BT8Function() {
+    let a = Number(document.getElementById("bt8").value);
+    let month = ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư",
+     "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám",
+      "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"];
+
+    document.getElementById("bt8kq").innerHTML= month[a - 1];
   }
 
-  for(let i = 2; i <= Math.sqrt(number); i++){
-    if (number % i == 0) { 
-      return false;
+  function BT9Function() {
+    let txt = document.getElementById("bt9").value;
+    let array = txt.trim().split(/\s+/); 
+    let longest = array.reduce((result, current) => {
+      result = current.length > result.length ? current : result
+      return result
+    }, "");
+
+    document.getElementById("bt9kq").innerHTML = longest;
+  }
+
+  function BT10Function() {
+    let a = Number(document.getElementById("bt10a").value);
+    let b = Number(document.getElementById("bt10b").value);
+
+    for(let v = a; v <= b; v++){
+      if(snt(v)){
+        document.getElementById("bt10kq").innerHTML = v;
+        return;
+      }
     }
   }
-  return true;
 
-}
+  function snt(number) {
+    if (number == 2) {
+      return true;
+    }
+    if (number < 2) { 
+      return false;
+    }
+    for(let i = 2; i <= Math.sqrt(number); i++){
+      if (number % i == 0) { 
+        return false;
+      }
+    }
+    return true;
+  }
 </script>
 </head>
 
-<body onload="startTime()">
+<body onload="">
   <p>bai1</p>
-  <div id="bai1"></div>
+  <div id="bai1" ></div>
+  <button  onclick="startTime()">Click me</button>
   <p>bai2</p>
   <div id="bai2"></div>
   <p>bai3</p>
@@ -145,6 +160,9 @@ function snt(number) {
   <p>bai5</p>
   <input type="text" id="bt5" onkeypress="BT5Function()">
   <div id="bt5kq"></div>
+  <p>bai6</p>
+  <input type="text" id="bt6" onkeypress="BT6Function()">
+  <div id="bt6kq"></div>
   <p>bai7</p>
   <input type="text" id="bt7" onkeypress="BT7Function()" placeholder="nhap chuoi can kt">
   <div id="bt7kq"></div>
