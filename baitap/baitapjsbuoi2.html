@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css/baitapjsbuoi2.css">
 </head>
 <body>
     <h2> 
@@ -13,15 +12,13 @@
     </h2>
     <!-- INPUT -->
     <div class="container">
-    
         <div> 
             Item name </br>
             <input placeholder="item name" id="itemName">
             <p id="invalid"></p>
         </div>
         <div> 
-            Category </br> 
-            
+            Category </br>   
             <select id="Category">
                 <option value="0"> No Selected </option>
                 <option value="1"> Category 1 </option>
@@ -30,17 +27,15 @@
             </select>
             <p id="invalid2"></p>
         </div>
-        <div> 
-            <input type="file" id="upFile">
-           
+        <div class="choosefilez"> 
+            <input type="file" accept="image/*" onchange="loadFile(event)"> </br>
+            <img id="output"/>
         </div>
-        <input type="submit" onclick="Valid1(),Valid2()" value="Submit Form"> 
+         <input class="submit" type="submit" onclick="checkname()" value="Submit Form"> 
     </div>
 <!-- OUTPUT -->
-    <div class="wrap">
-        
-
-    </div> 
-        <script src="../buoi8/buoi8.js"> </script>
+    <div class="wrap"></div> 
+    <table></table>
+    <script src="./js/jsbuoi2.js"> </script>
 </body>
 </html>
