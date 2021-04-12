@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Alef';
     font-size: 20px;
@@ -10,4 +9,7 @@ h1 {
 
 a {
     color: black;
+}
+area {
+    border: none;
 }

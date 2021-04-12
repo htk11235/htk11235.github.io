@@ -1,21 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>nhom21</title>
-        <link rel="stylesheet" href="./CSS/index.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="./bttkw/CSS/index.css" />
         <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
     </head>
     <body>
-        <h2>Image Maps</h2>
-        <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
-        <img src="./bttkw/img/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
-        <map name="workmap">
-            <area shape="poly" coords="33,49 40,41 268,43 276,52 266,189 268,196 274,341 269,350 37,347 31,340 42,195 45,168" 
-                alt="Computer" href="./bttkw/htmls/computer.html" target="blank">
-            <area shape="poly" coords="291,174 329,173 335,246 295,247" alt="Phone"
-                href="./bttkw/htmls/phone.html" target="blank">
-            <area shape="circle" coords="338,301,45" alt="Cup of coffee" href="./bttkw/htmls/coffee.html" target="blank">
-        </map>
+        <div class="header_container">
+            <div class="row">
+                <ul class="menu">
+                    <li><a href="https://www.facebook.com/htk148/" target="_blank"><i class="fas fa-box-open"></i> Tra cứu đơn hàng</a></li>
+                    <li><a href="https://www.facebook.com/htk148/" target="_blank"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a></li>
+                    <li><a href="https://www.facebook.com/htk148/" target="_blank"><i class="far fa-heart"></i> Yêu thích</a></li>
+                    <li><a href="https://www.facebook.com/htk148/" target="_blank"><i class="fas fa-user-alt"></i> Đăng nhập</a></li>
+                    <li><a href="https://www.facebook.com/htk148/" target="_blank"><i class="fas fa-shopping-bag"></i>Giỏ hàng (<span class="countProduct">0</span>)</a></li>
+                </ul>
+            </div>
+            <div class="rownav">
+                <a href="#"> <img class="logo" src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/Logo_Ananas_Header.svg" /></a>
+                <ul class="navbar">
+                    <li class="dropdown">
+                        <a href="https://www.facebook.com/htk148/" class="dropdown-toggle" target="_blank">SẢN PHẨM <span class="caret"></span></a> <hr>
+                    </li>
+                    <li class="line"></li>
+                    <li class="dropdown">
+                        <a href="https://www.facebook.com/htk148/" class="dropdown-male" target="_blank">NAM<span class="caret"></span></a><hr>
+                    </li>
+                    <li class="line"></li>
+                    <li class="dropdown">
+                        <a href="https://www.facebook.com/htk148/" class="dropdown-female" target="_blank">NỮ<span class="caret"></span></a><hr>
+                    </li>
+                    <li class="line"></li>
+                    <li class="dropdown">
+                        <a href="https://www.facebook.com/htk148/" class="dropdown-sale" target="_blank">SALE OFF<span class="caret"></span></a><hr>
+                    </li>
+                    <li class="line"></li>
+                    <li><a href="https://www.facebook.com/htk148/" target="_blank"><img  class="dcv" src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/DiscoverYOU.svg"></a></li>
+                    <div class="form-group">
+                        <img class="icon-search" src="https://ananas.vn/wp-content/themes/ananas/fe-assets/images/svg/icon_tim_kiem.svg">
+                        <input type="text" name="key" class="form-control" value="" placeholder="         Tìm kiếm">
+                    </div>
+                </ul>
+            </div>
+            <img style="width: 100%;" src="https://ananas.vn/wp-content/uploads/Track-6_Suede_Moonphase_1920x1050.jpg">
+        </div>
+        <div class="content_container">
+            <div class="content_name"><h2>Best Seller</h2></div>
+            <div class="product_container">
+                <div class="item1">
+                    <div class="cont-item"><a href="https://ananas.vn/product-detail/abc100/" tabindex="0"><img src="https://ananas.vn/wp-content/uploads/pro_ABC100_1-500x500.jpg"></a></div>
+                    <div class="caption">
+                        <h3 class="name"><a href="https://ananas.vn/product-detail/abc100/" tabindex="0">Baseball Cap - Be Positive</a></h3>
+                        <h3 class="color">Pink</h3>
+                        <h3 class="price">275.000 VND</h3>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="cont-item"><a href="https://ananas.vn/product-detail/a61043/" tabindex="0"><img src="https://ananas.vn/wp-content/uploads/pro_A61111_1-500x500.jpg"></a></div>
+                    <div class="caption">
+                        <h3 class="name"><a href="https://ananas.vn/product-detail/a61111/">Vintas Temperate - High Top</a></h3>
+                        <h3 class="color">Dusty Olive</h3>
+                        <h3 class="price">770.000 VND</h3>
+                    </div>
+                </div>
+                <div class="item1">
+                    <div class="cont-item"><a href="https://ananas.vn/product-detail/abc100/" tabindex="0"><img src="https://ananas.vn/wp-content/uploads/pro_A61101_1_1-500x500.jpg"></a></div>
+                    <div class="caption">
+                        <h3 class="name"><a href="https://ananas.vn/product-detail/a61101/">Vintas Mister - High Top</a></h3>
+                        <h3 class="color">Chocolate Brown</h3>
+                        <h3 class="price">610.000 VND</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
