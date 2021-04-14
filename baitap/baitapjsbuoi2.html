@@ -5,37 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/baitapjsbuoi2.css">
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
 </head>
-<body>
-    <h2> 
-        Bài tập JS cơ bản! 
-    </h2>
-    <!-- INPUT -->
-    <div class="container">
-        <div> 
-            Item name </br>
-            <input placeholder="item name" id="itemName">
-            <p id="invalid"></p>
+<body onload="load_data()">
+    <h1>Bai Tap JS Co Ban</h1>
+    <div class="inputform">
+        <div class="component">
+            <label for="txtname">Item name</label>
+            <input type="text" id="txtname">
+            <p id="name-warning" class="warning"></p>
         </div>
-        <div> 
-            Category </br>   
-            <select id="Category">
-                <option value="0"> No Selected </option>
-                <option value="1"> Category 1 </option>
-                <option value="2"> Category 2 </option>
-                <option value="3"> Category 3 </option>
-            </select>
-            <p id="invalid2"></p>
+        
+        <div class="component">
+            <label for="categories">Category</label>
+            <select name="cars" id="categories">
+                <option value="Not Selected">Not Selected</option>
+                <option value="Category1">Category1</option>
+                <option value="Category2">Category2</option>
+                <option value="Category3">Category3</option>
+              </select>
+            <p id="category-warning" class="warning"></p>
         </div>
-        <div class="choosefilez"> 
-            <input type="file" accept="image/*" onchange="loadFile(event)"> </br>
-            <img id="output"/>
-        </div>
-         <input class="submit" type="submit" onclick="checkname()" value="Submit Form"> 
+        <div class="component">
+            <input type="file" id="myfile" onchange="readURL(this);">
+            <div class="container">
+                <label for="myfile">Choose file</label>
+                <img id="idimg" src="" alt=" "> 
+            </div>
+        </div>  
+            <input type="submit" class="submit" id="submit" value="Submit form" onclick="submit()">
     </div>
-<!-- OUTPUT -->
-    <div class="wrap"></div> 
-    <table></table>
-    <script src="./js/jsbuoi2.js"> </script>
+    
+
+        <table id="idtable" class="item-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item name</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                </tr>
+            </tbody>
+        </table>
+    
+    <script src="./js/jsbuoi2.js"></script>
+
+
 </body>
 </html>

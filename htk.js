@@ -26,21 +26,22 @@ function addrow(item , count){
         img.height=100;
        
         //button edit
-        btnedit.className ="btn-primary";
+        btnedit.className ="btn btn-primary";
         btnedit.innerHTML="EDIT";
-        btnedit.id="btnedit"+count;  
-        btnedit.onclick = item_edit;
+        btnedit.id="btnedit"+count;
+        btnedit.onclick = item_edit;        
+
 
         //button save
-        btnsave.className = "btn-success";
+        btnsave.className = "btn btn-success";
         btnsave.innerHTML = "SAVE";
         btnsave.id="btnsave"+count;
 
         //button delete
-        btndelete.className = "btn-danger";
+        btndelete.className = "btn btn-danger";
         btndelete.innerHTML="DELETE";
         btndelete.id="btndelete"+count;
-        btndelete.onclick = item_delete;
+        btndelete.onclick =item_delete;
 
         //input name
         txtname.setAttribute("type","text");
@@ -108,22 +109,17 @@ function submit(){
         count=item_list.length;
         addrow(item , count);
     }
-}
-
-function item_edit() {
-    let item_list = JSON.parse(sessionStorage.getItem("item_list"));
-    let index = this.id.replace("btndelete","");
-    let row = table.rows[index];
 
 }
+
 function item_delete(){
-    let item_list = JSON.parse(sessionStorage.getItem("item_list"));
-    let index = this.id.replace("btndelete","");
-    let row = table.rows[index];
+    let item_list=JSON.parse(sessionStorage.getItem("item_list"));
+    let index;
+    let row = table.rows[this.id];
     let itemname = row.cells[1].childNodes[0].value;
 
     //delete table 
-    table.deleteRow(index);
+    table.deleteRow(this.id);
 
     //delete in local storage
     for(let i =0 ;i < item_list.length ;i++){
@@ -167,5 +163,6 @@ function check(name,category){
             return false;
         }
     }
+
     return true;
 }
