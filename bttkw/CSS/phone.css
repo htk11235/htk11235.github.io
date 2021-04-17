@@ -11,3 +11,6 @@ a {
     color: black;
     border: 3px black;
 }
+.w3-container {
+    width: 700px;
+}

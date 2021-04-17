@@ -1,9 +1,8 @@
 var reader ="";
 var table = document.getElementById("idtable").getElementsByTagName("tbody")[0];
 function load_data() {
-    let  item_list ;
     let count=1;
-    item_list = JSON.parse(sessionStorage.getItem("item_list"));
+    let  item_list = JSON.parse(sessionStorage.getItem("item_list"));
     item_list.forEach(element => {
         let item = JSON.parse(element);
         addrow(item,count);
@@ -111,9 +110,7 @@ function submit(){
 }
 
 function item_edit() {
-    let item_list = JSON.parse(sessionStorage.getItem("item_list"));
-    let index = this.id.replace("btndelete","");
-    let row = table.rows[index];
+    
 
 }
 function item_delete(){
@@ -124,18 +121,15 @@ function item_delete(){
 
     //delete table 
     table.deleteRow(index);
-
     //delete in local storage
     for(let i =0 ;i < item_list.length ;i++){
         let item = JSON.parse(item_list[i]);
         if(itemname === item._name) {
-            index=item_list.indexOf(item);
-            item_list.splice(index,1);
-            break;
+            item_list.splice(i,1);  
         }
     }
-    //update local storage
     sessionStorage.setItem("item_list",JSON.stringify(item_list));
+    location.reload();
 }
 function check(name,category){
     var item_list;

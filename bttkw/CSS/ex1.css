@@ -13,3 +13,8 @@ a {
 area {
     border: none;
 }
+{
+    "fontshortcuts.defaultFontSize": 15,
+    "fontshortcuts.defaultTerminalFontSize": 15,
+    "fontshortcuts.step": 1
+  }
