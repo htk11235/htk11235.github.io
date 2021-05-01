@@ -6,7 +6,8 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(26, 26, 26);
+
 }
 
 section{
@@ -264,9 +265,8 @@ section{
 
 }
 .educations {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(26, 26, 26) ;
     width: 100%;
-    
 }
 
 .section-title {
