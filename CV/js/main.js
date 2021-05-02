@@ -1,5 +1,5 @@
 
-if (window.matchMedia("(min-width: 1000px)").matches) {
+if (window.matchMedia("(min-width: 768px)").matches) {
 document.addEventListener('DOMContentLoaded', () => {
     let controller = new ScrollMagic.Controller();
     let timeline = new TimelineMax();

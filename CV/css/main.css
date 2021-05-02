@@ -319,6 +319,10 @@ section{
     animation-delay: -4s;
     animation: move 10s linear infinite;
   }
+  .timeline {
+      border-left: white 3px solid;
+      padding-left: 12.5px;
+  }
   
   @keyframes move {
     0% {
