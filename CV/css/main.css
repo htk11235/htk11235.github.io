@@ -98,12 +98,9 @@ section{
     padding-top: 30vh;
 }
 .avt {
-    margin-left: 5vw !important;
     width: 12vw;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    ma
+    margin-left: 5vw;
     transition: 0.8s;
     box-shadow: rgba(0, 0, 0, 0.712) 5px 5px 5px;
 }
@@ -354,6 +351,9 @@ section{
         margin-top: -130px;
     }
     .about {
+        height: fit-content;
+    }
+    .educations {
         height: fit-content;
     }
     .contentabout {
