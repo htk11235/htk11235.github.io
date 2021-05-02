@@ -128,10 +128,10 @@ section{
 .contentskills {
     background-color: rgba(165, 81, 33, 0.712);
     width: 50vw;
-    margin-top: 30vh;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30vh;
+    margin-top: 200px;
+    margin-bottom: 100px;
     padding: 30px 30px 30px 50px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.712) 5px 5px 10px;
@@ -358,7 +358,11 @@ section{
         width: 70vw;
         padding-bottom: 5vh;
     }
-    .contentskills, .contenteducations {
+    .contentskills {
+        width: 65vw;
+        margin-top: 100px;
+    }
+    .contenteducations {
         width: 65vw;
     }
     .section-title {
