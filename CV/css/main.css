@@ -342,7 +342,7 @@ section{
       background-position: 0%;
     }
   }
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 960px) {
     .boxcontent-about {
         display: block;
     }
