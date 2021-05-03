@@ -7,7 +7,6 @@
 
 body {
     background-color: rgb(0, 0, 0);
-
 }
 
 section{
@@ -58,9 +57,11 @@ section{
     font-size: 5vh;
     opacity: 0.7;
 }
+
 .title h3 {
     text-align: center;
 }
+
 .images{
     width: 100%;
     height: 110%;
@@ -97,6 +98,7 @@ section{
     justify-content: space-between;
     padding-top: 30vh;
 }
+
 .avt {
     margin-left: 5vw !important;
     width: 12vw;
@@ -105,10 +107,12 @@ section{
     transition: 0.8s;
     box-shadow: rgba(0, 0, 0, 0.712) 5px 5px 5px;
 }
+
 .avt:hover {
     box-shadow: none;
     transform: rotateZ(360deg);
 }
+
 .contentabout {
     background-color: rgba(25, 75, 31, 0.712);
     width: 30vw;
@@ -118,13 +122,16 @@ section{
     box-shadow: rgba(0, 0, 0, 0.712) 5px 5px 10px; 
     transition: 1s;
 }
+
 .contentabout:hover {
     box-shadow: none;
     transform: scale3d(1.1,1.1,1.1);
 }
+
 .contentabout ul {
     padding-top: 10px;
 }
+
 .contentskills {
     background-color: rgba(165, 81, 33, 0.712);
     width: 50vw;
@@ -137,24 +144,30 @@ section{
     box-shadow: rgba(0, 0, 0, 0.712) 5px 5px 10px;
     transition: 1s;
 }
+
 .contentskills:hover {
     box-shadow: none;
     transform: scale3d(1.1,1.1,1.1);
 }
+
 .contenteducations {
     background-color: rgba(13, 69, 102, 0.712);
     width: 50vw;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
     padding: 30px 30px 30px 50px;
-    margin-top: 30vh !important;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.712) 5px 5px 10px;
     transition: 1s;
 }
+
 .contenteducations:hover {
     box-shadow: none;
     transform: scale3d(1.1,1.1,1.1);
 }
+
 .footer-wrapper{
     position: absolute;
     bottom: 0;
@@ -178,6 +191,7 @@ section{
 .footer-wrapper i {
     z-index: 1000;
 }
+
 .content {
     height: 100%;
     width: 100%;
@@ -282,14 +296,16 @@ section{
     font-size: 50px;
     transition: 0.5s;
 }
+
 .section-title:hover {
     color: brown;
     background-color: rgb(20, 1, 39);
 }
+
 .footer {
     background-color: rgb(26, 26, 26);
-
 }
+
 .footer .wave {
     width: 100%;
     height: 227px;
@@ -297,7 +313,7 @@ section{
     left: 0;
     background: url(../img/wave-large.png);
     animation: move 10s linear infinite;
-  }
+}
   
 .footer .wave::before {
     content: '';
@@ -309,7 +325,8 @@ section{
     background: url(../img/wave-large.png);
     opacity: 0.4;
     animation: move-reversed 10s linear infinite;
-  }
+}
+
 .footer .wave::after {
     content: '';
     width: 100%;
@@ -320,74 +337,97 @@ section{
     opacity: 0.5;
     animation-delay: -4s;
     animation: move 10s linear infinite;
-  }
-  .timeline {
-      border-left: white 3px solid;
-      padding-left: 12.5px;
-  }
+}
+
+.timeline {
+    border-left: white 3px solid;
+    padding-left: 12.5px;
+}
   
-  @keyframes move {
+@keyframes move {
     0% {
       background-position: 0%;
     }
     100% {
       background-position: 100vw;
     }
-  }
-  @keyframes move-reversed {
+}
+
+@keyframes move-reversed {
     0% {
       background-position: 100vw;
     }
     100% {
       background-position: 0%;
     }
-  }
+}
+
 @media only screen and (max-width : 960px) {
     .boxcontent-about {
         display: block;
     }
+
     .avt {
         width: 30vw !important;
         margin-left: 35vw !important;
         margin-top: -190px;
     }
+
     .about {
         height: fit-content;
     }
+
     .contentabout {
         width: 70vw;
         padding-bottom: 5vh;
     }
+
     .contentskills {
         width: 65vw;
         margin-top: 100px;
     }
+
     .contenteducations {
         width: 65vw;
+        margin-top: 100px;
     }
+
     .section-title {
         padding-top: 10vh;
     }
+
     .space {
         height: 5vh;
     }
+
     .images, .content, .footer-wrapper {
         display: none;
     }
+
     .nav-wrapper {
         width: 100w;
     }
+
     .title h3 {
         font-size: 30px;
     }
+
     .section-title {
         font-size: 20px;
     }
+
     #first-section {
         height: 50vh;
     }
+
     .title {
         top: 20%;
     }
+}
 
+@media only screen and (max-width : 768px) {
+    .contentskills, .contenteducations {
+        width: 65vw;
+        margin-top: 180px;
+    }
 }
