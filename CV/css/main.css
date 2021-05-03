@@ -430,4 +430,82 @@ section{
         width: 65vw;
         margin-top: 120px;
     }
+    .nav-wrapper .button {
+        
+        font-size: 0.6em;
+    
+    }
+}
+@media only screen and (max-width : 400px) {
+    .boxcontent-about {
+        display: block;
+    }
+
+    .avt {
+        width: 30vw !important;
+        margin-left: 35vw !important;
+        margin-top: -190px;
+    }
+
+    .about {
+        height: fit-content;
+    }
+
+    .contentabout {
+        width: 60vw;
+        padding-bottom: 5vh;
+    }
+
+    .contentskills {
+        width: 55vw;
+        margin-top: 100px;
+    }
+
+    .contenteducations {
+        width: 55vw;
+        margin-top: 100px;
+    }
+
+    .section-title {
+        padding-top: 10vh;
+    }
+
+    .space {
+        height: 5vh;
+    }
+
+    .images, .content, .footer-wrapper {
+        display: none;
+    }
+
+    .nav-wrapper {
+        width: 90w;
+    }
+
+    .nav-wrapper .button {
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        padding: 10px 20px;
+        background-color: #030000;
+        border-radius: 20px;
+        font-size: 0.5em;
+        opacity: 0.5;
+    }
+
+    .title h3 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 15px;
+    }
+
+    #first-section {
+        height: 50vh;
+    }
+
+    .title {
+        top: 20%;
+    }
 }
