@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Helvetica;
+    background-color: rgb(241, 241, 241);
+}
+
+.container .title {
+    font-size:25px;
+    text-transform: uppercase;
+    margin: 10px 0px -12px 205px;
+
+}
+.underLine {
+    width: 86.5%;
+    height:5px;
+    border:1px;
+    background: rgba(189, 184, 184, 0.973);
+}
+.underLine div {
+    width: 183px;
+    height:5px;
+    border:1px;
+    background: rgb(138, 23, 29);
+}
+.box {
+    margin: auto;
+    margin-top: 3%;
+    background-color: rgb(241, 241, 241);
+}
+
+th {
+    padding: 0.1px;
+}
+
+.product {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    position: relative;
+    width: 210px;
+}
+
+.product__img {
+    
+}
+
+.product__img img{
+    width: 210px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.product__img img:hover {
+    transform: scale3d(1.1,1.1,1.1);
+}
+
+.product__sale {
+    width: 70px;
+    height: 20px;
+    background-color: rgb(50, 209, 50);
+    float: left;
+    text-align: center;
+    color: white;
+    position: absolute;
+    padding-top: ;
+    margin-top: 15px;
+    z-index: 99;
+    font-size: 11px;
+    font-weight: 300;
+    font-family: Verdana;
+}
+
+.product__sale p {
+    margin-top: 4.5px;
+}
+
+.product__sale:before {
+    content: "";
+    border-top: 10px solid transparent;
+    border-left: 11px solid rgb(50, 209, 50);
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    left: 70px;
+    z-index: 99;
+}
+
+.infor__text p {
+    font-size: 15px;
+    margin: 0px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.infor__text p:hover {
+    color: red;
+}
+
+.product__code {
+    opacity: 0.4;
+    font-size: small;
+}
+
+.product__price {
+    color: red;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.product__price:hover {
+    color: brown;
+}

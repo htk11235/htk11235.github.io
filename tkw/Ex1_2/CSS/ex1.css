@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: Verdana;
+}
+
+.box {
+    background-color: rgb(255, 255, 255);
+    width: 220mm;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20vh;
+    border-radius: 2px;
+    border: rgb(226, 226, 226) 0.5px solid;
+    box-shadow: black 5px 5px 20px;
+}
+
+.box h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(141, 0, 28);
+}
+
+.box__content p {
+    margin-left: 0px;
+    text-align: justify;
+    font-size: 13px;
+}
+
+.box__content a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.box__content::first-letter{
+    color: red;
+    font-size: 30px;
+}
