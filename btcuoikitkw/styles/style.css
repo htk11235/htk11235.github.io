@@ -35,7 +35,6 @@ header {
     height: 72px;
     width: 877px;
     margin: auto;
-    padding-top: 20px;
     text-align: center;
 }
 
@@ -52,10 +51,9 @@ header {
     text-decoration: none;
     color: aliceblue;
     font-size: 15px;
-    padding: 35px 15px 35px 15px;
+    padding: 28px 10px 28px 10px;
     transition: 0.3s;
-    width: 120px;
-    height: 72px;
+    
 }
 
 .navbar a:hover {
