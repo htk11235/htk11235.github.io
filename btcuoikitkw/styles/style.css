@@ -113,13 +113,7 @@ main {
 
 .content img {
     width: 400px;
-    transition: 0.3s;
 }
-
-.content img:hover {
-    transform: scale3d(1.2,1.2,1.2);
-}
-
 .content-img {
     text-align: center;
 }
