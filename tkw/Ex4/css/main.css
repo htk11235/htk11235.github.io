@@ -7,11 +7,11 @@ body {
 .container .title {
     font-size:25px;
     text-transform: uppercase;
-    margin: 10px 0px -12px 205px;
+    margin: 10px 0px -12px 11.7vw;
 
 }
 .underLine {
-    width: 86.5%;
+    width: 1330px;
     height:5px;
     border:1px;
     background: rgba(189, 184, 184, 0.973);
@@ -23,7 +23,8 @@ body {
     background: rgb(138, 23, 29);
 }
 .box {
-    margin: auto;
+    margin-left: 11.7vw;
+    width: 1330px;
     margin-top: 3%;
     background-color: rgb(241, 241, 241);
 }
@@ -37,20 +38,22 @@ th {
     padding: 5px;
     position: relative;
     width: 210px;
+    
 }
 
 .product__img {
-    
+    overflow: hidden;
 }
 
 .product__img img{
     width: 210px;
-    transition: 1s;
+    transition: 0.7s;
     cursor: pointer;
+    
 }
 
 .product__img img:hover {
-    transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.2,1.2,1.2);
 }
 
 .product__sale {
@@ -67,6 +70,18 @@ th {
     font-size: 11px;
     font-weight: 300;
     font-family: Verdana;
+    animation: colorBackground 0.8s infinite;
+} 
+
+@keyframes colorBackground {
+    0% {
+    background-color: rgb(50, 209, 50);
+    
+    }
+    50% {
+    background-color:  yellow;
+    color: rgb(255, 0, 0);
+    }
 }
 
 .product__sale p {
@@ -81,6 +96,18 @@ th {
     position: absolute;
     left: 70px;
     z-index: 99;
+    animation: colorBackgroundbefore 0.8s infinite;
+}
+        
+@keyframes colorBackgroundbefore {
+        0% {
+        border-left: 11px solid rgb(50, 209, 50);
+
+        }
+        50% {
+            border-left: 11px solid yellow;
+        color: rgb(255, 0, 0);
+        }
 }
 
 .infor__text p {

@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Helvetica;
+    background-color: rgb(236,236,224);
+}
+
+header {
+    width: 100%;
+    background-color: rgb(255, 174, 94);
+    position: fixed;
+}
+
+.header-logo {
+    width: 825px;
+    height: 168px;
+    margin: auto;
+    background-image: url(../Imgs/logo.png);
+}
+
+.header-logo h1 {
+    font-weight: 400;
+    font-size: 43.4px;
+}
+
+.header-logo div {
+    padding-top: 25px;
+}
+
+.header-logo span {
+    font-size: 30px;
+}
+/*done logo*/
+.navbar {
+    background-color: rgba(247,124,1,255);
+    height: 72px;
+    width: 877px;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline;  
+    margin-right: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+    padding: 35px 15px 35px 15px;
+    transition: 0.3s;
+    width: 120px;
+    height: 72px;
+}
+
+.navbar a:hover {
+    font-size: 15.5px;
+    color: rgb(90, 0, 108);
+    background-color: rgba(240,90,0,255);
+    box-shadow: 15px 1px 15px 1px black;
+}
+
+/*done navbar*/
+
+
+/**done header**/
+
+main {
+    display: flex;
+    margin: auto;
+    width: 877px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 260px;
+    padding-bottom: 120px;
+    box-shadow: 1px 1px 15px 0.5px black;
+}
+
+.content {
+    width: 595px;
+    padding: 10px 10px 10px 10px;
+}
+
+.content h2 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.content p {
+    font-size: 12.5px;
+    text-align: justify;
+}
+
+.content ul {
+    font-size: 12.5px;
+    margin-left: -38px;
+    list-style: circle inside url(../Imgs/bullet.png);
+}
+
+.content a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.content a:hover {
+    color: rgb(168, 0, 0);
+    font-size: 15px;
+}
+
+.content img {
+    width: 400px;
+    transition: 0.3s;
+}
+
+.content img:hover {
+    transform: scale3d(1.2,1.2,1.2);
+}
+
+.content-img {
+    text-align: center;
+}
+
+/*done content*/
+
+.sidebar {
+    width: 190px;
+    margin-left: 45px;
+}
+
+.sidebar h2 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.sidebar p {
+    font-size: 12.5px;
+}
+
+.orange-link {
+    font-size: 13.5px;
+    color: rgb(224, 146, 0);
+    transition: 0.3s;
+    vertical-align: super;
+}
+
+.orange-link:hover {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(255, 0, 0);
+}
+
+.sidebar ul {
+    list-style: circle inside url(../Imgs/link.png);
+    font-size: 12.5px;
+    margin-left: -38px;
+}
+
+.sidebar a {
+    
+}
+
+.container {
+    display: flex;
+}
+
+/*done main*/
+
+footer {
+    width: 878px;
+    height: 70px;
+    background-color: rgb(248,132,4);
+    margin: auto;
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+    word-spacing: 4px;
+}
+
+footer .copyright {
+    padding-top: 16px;
+}
+
+/*done footer*/
