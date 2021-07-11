@@ -19,7 +19,8 @@ header {
 
 .header-logo h1 {
     font-weight: 400;
-    font-size: 43.4px;
+    font-size: 43.3px;
+    text-align: center;
 }
 
 .header-logo div {
