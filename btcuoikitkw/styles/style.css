@@ -58,10 +58,9 @@ header {
 }
 
 .navbar a:hover {
-    font-size: 15.5px;
     color: rgb(90, 0, 108);
     background-color: rgba(240,90,0,255);
-    box-shadow: 15px 1px 15px 1px black;
+    box-shadow: 10px 1px 10px 1px black;
 }
 
 /*done navbar*/
